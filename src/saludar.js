@@ -1,18 +1,33 @@
-function saludar (nombre, edad,genero)
+function saludar (nombre, edad, genero)
 {
-  if (edad>30){
-    
+  var fechaHoraActual = new Date();
+  var hora = fechaHoraActual.getHours();
+  var saludar;
+  if(hora >= 12 && hora<19) 
+  {
+    saludar="Buenos tardes";
+  }
+  if(hora >= 19 && hora < 0)
+  {
+    saludar="Buenos noches";
+  }
+  if(hora >= 0 && hora<12 )
+  {
+    saludar="Buenos dias";
+  }
+  if ( edad>30 ){
+
     if(genero=="masculino")
     {
-      return "Sr "+ nombre;
+      return  saludar + " Sr "+ nombre ;
     }
     if(genero=="femenino")
     {
-      return "Sra "+ nombre;
+      return saludar + " Sra "+ nombre;
     }
   }
   else{
-    return nombre;
+    return saludar + " " + nombre;
   }
 }
 
