@@ -1,8 +1,15 @@
-function saludar (nombre, edad)
+function saludar (nombre, edad,genero)
 {
   if (edad>30){
     
-    return "Sr "+ nombre;
+    if(genero=="masculino")
+    {
+      return "Sr "+ nombre;
+    }
+    if(genero=="femenino")
+    {
+      return "Sra "+ nombre;
+    }
   }
   else{
     return nombre;
