@@ -1,6 +1,12 @@
-function saludar (nombre)
+function saludar (nombre, edad)
 {
-  return nombre;
+  if (edad>30){
+    
+    return "Sr "+ nombre;
+  }
+  else{
+    return nombre;
+  }
 }
 
 export default saludar;
