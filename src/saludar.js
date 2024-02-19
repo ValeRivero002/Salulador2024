@@ -31,9 +31,9 @@ function saludar_es (nombre, edad, genero)
   }
 }
 
-function saludar_en ()
+function saludar_en (nombre)
 {
-  return "Hi";
+  return "Hi" + " " + nombre;
  
 }
 export { saludar_es, saludar_en };
