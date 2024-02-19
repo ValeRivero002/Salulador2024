@@ -31,8 +31,12 @@ function saludar_es (nombre, edad, genero)
   }
 }
 
-function saludar_en (nombre)
+function saludar_en (nombre,genero)
 {
+  if(genero=="female")
+    {
+      return "Hi" + " Mrs "+ nombre;
+    }
   return "Hi" + " " + nombre;
  
 }
