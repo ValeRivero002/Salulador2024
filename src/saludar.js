@@ -34,19 +34,34 @@ function saludar_es (nombre, edad, genero)
 function saludar_en (nombre,edad,genero)
 {
   
+  var fechaHoraActual = new Date();
+  var hora = fechaHoraActual.getHours();
+  var saludar;
+  if(hora >= 12 && hora<19) 
+  {
+    saludar="Good Afternoon";
+  }
+  if(hora >= 19 && hora < 0)
+  {
+    saludar="Good Night";
+  }
+  if(hora >= 0 && hora<12 )
+  {
+    saludar="Good Morning";
+  }
   if ( edad>30 ){
 
     if(genero=="male")
     {
-      return  "Hi Mr "+ nombre ;
+      return  saludar + " Mr "+ nombre ;
     }
     if(genero=="female")
     {
-      return "Hi Mrs "+ nombre;
+      return saludar + " Mrs "+ nombre;
     }
   }
   else{
-    return  "Hi " + nombre;
+    return saludar + " " + nombre;
   }
  
 }
