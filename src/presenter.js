@@ -13,13 +13,15 @@ form.addEventListener("submit", (event) => {
   const edad  = edad_input.value;
   const genero  = genero_input.value;
   const idioma = document.getElementById('idioma').value;
+  let saludo;
   if (idioma == "es")
   {
-    div.innerHTML = "<p>"  + saludar_es(nombre,edad,genero) + "</p>";
+    saludo = "<strong>" + saludar_es(nombre, edad, genero) + "</strong>";
   } 
   if (idioma == "en")
   {
-    div.innerHTML = "<p>"  + saludar_en() + "</p>";
+    saludo = "<strong>" + saludar_en() + "</strong>";
   } 
+  div.innerHTML = "<p>" + saludo + "</p>";
 });
 
