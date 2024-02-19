@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
   } 
   if (idioma == "en")
   {
-    saludo = "<strong>" + saludar_en(nombre,genero) + "</strong>";
+    saludo = "<strong>" + saludar_en(nombre,edad,genero) + "</strong>";
   } 
   div.innerHTML = "<p>" + saludo + "</p>";
 });
