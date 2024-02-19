@@ -1,4 +1,4 @@
-function saludar (nombre, edad, genero)
+function saludar_es (nombre, edad, genero)
 {
   var fechaHoraActual = new Date();
   var hora = fechaHoraActual.getHours();
@@ -31,4 +31,9 @@ function saludar (nombre, edad, genero)
   }
 }
 
-export default saludar;
+function saludar_en ()
+{
+  return "Hi";
+ 
+}
+export { saludar_es, saludar_en };

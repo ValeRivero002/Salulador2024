@@ -1,10 +1,9 @@
-import saludar from "./saludar";
+import { saludar_es, saludar_en } from "./saludar";
 
 const nombre_input = document.querySelector("#nombre");
 const edad_input = document.querySelector("#edad");
 const genero_input = document.querySelector("#genero");
 const form = document.querySelector("#saludar-form");
-const idioma = document.getElementById('idioma').value;
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
@@ -13,7 +12,14 @@ form.addEventListener("submit", (event) => {
   const nombre  = nombre_input.value;
   const edad  = edad_input.value;
   const genero  = genero_input.value;
-  if (idioma == 'es') 
-  div.innerHTML = "<p>"  + saludar(nombre,edad,genero) + "</p>";
+  const idioma = document.getElementById('idioma').value;
+  if (idioma == "es")
+  {
+    div.innerHTML = "<p>"  + saludar_es(nombre,edad,genero) + "</p>";
+  } 
+  if (idioma == "en")
+  {
+    div.innerHTML = "<p>"  + saludar_en() + "</p>";
+  } 
 });
 
